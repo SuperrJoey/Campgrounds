@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <div class="text-center">
+        <h1 class="mb-3">New Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label for="title" class="form-label d-flex justify-content-start">Title</label>
+                    <input type="text" name="campground[title]" id="title" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label d-flex justify-content-start">Location</label>
+                    <input type="text" class="form-control" name="campground[location]" id="location" required>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label d-flex justify-content-start">Image URL</label>
+                    <input type="text" class="form-control" name="campground[image]" id="image" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label d-flex justify-content-start">Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input type="text" class="form-control" name="campground[price]" id="price" placeholder="0" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label d-flex justify-content-start">Description</label>
+                    <textarea class="form-control" name="campground[description]" id="description" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-dark">Add Campground</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<a href="/campgrounds">Go Back</a>
+
+
